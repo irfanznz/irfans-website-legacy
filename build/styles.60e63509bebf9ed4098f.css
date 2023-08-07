@@ -1,0 +1,79 @@
+:root {
+	--pcolor: #262626;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+	font-family: "Dream Orphans";
+	src: url(2b5129ced268573283a7.otf);
+	font-weight: normal;
+	font-style: normal;
+}
+
+#threejs-container {
+	position: fixed;
+	z-index: 0;
+	top: 0;
+	left: 0;
+}
+
+#welcome-banner {
+	width: 100%;
+	height: 600vh;
+	background-color: white;
+	border-bottom: 1px solid var(--pcolor);
+}
+
+#welcome-text-wrapper {
+	display: flex;
+	width: 100%;
+	height: 90vh;
+	justify-content: center;
+	align-items: center;
+}
+
+#welcome-text {
+	z-index: 2;
+	color: white;
+	font-size: 700%;
+	font-family: "Dream Orphans";
+	text-shadow: -1px -1px 0 var(--pcolor), 1px -1px 0 var(--pcolor),
+		-1px 1px 0 var(--pcolor), 1px 1px 0 var(--pcolor);
+}
+
+.typed-cursor {
+	z-index: 2;
+	color: var(--pcolor);
+	font-size: 1000%;
+	font-family: sans-serif;
+	animation: blink 1s infinite;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.display-flex {
+	display: flex;
+}
+
+#about-section {
+	z-index: 3;
+}
+
