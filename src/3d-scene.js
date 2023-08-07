@@ -26,7 +26,7 @@ export function initScene() {
 	const rendererContainer = document.getElementById("threejs-container");
 	rendererContainer.appendChild(renderer.domElement);
 
-	renderer.setPixelRatio(window.devicePixelRatio);
+	renderer.setPixelRatio(window.devicePixelRatio * 1.5);
 	const manager = new THREE.LoadingManager();
 
 	const scene = new THREE.Scene();
