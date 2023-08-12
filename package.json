@@ -1,7 +1,6 @@
 {
   "name": "irfans-website",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js --open",
@@ -26,5 +25,17 @@
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
-  }
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irfanznz/irfans-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/irfanznz/irfans-website/issues"
+  },
+  "homepage": "https://github.com/irfanznz/irfans-website#readme",
+  "description": ""
 }
