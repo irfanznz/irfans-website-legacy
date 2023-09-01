@@ -30,7 +30,7 @@ function smoothScroll() {
 	lenis.on("scroll", ScrollTrigger.update);
 
 	gsap.ticker.add((time) => {
-		lenis.raf(time * 800);
+		lenis.raf(time * 1000);
 	});
 
 	gsap.ticker.lagSmoothing(0);
@@ -56,11 +56,11 @@ function colorAnims() {
 
 function typeAnims() {
 	const welcomeTextType = new Typed("#welcome-text", {
-		strings: ["welcome", "selamat datang", "bienvenido", "مرحباً"],
+		strings: ["welcome", "selamat datang", "bienvenue", "مرحباً"],
 		loop: true,
-		typeSpeed: 100,
-		backSpeed: 100,
-		backDelay: 2000,
+		typeSpeed: 80,
+		backSpeed: 80,
+		backDelay: 1000,
 		showCursor: true,
 		cursorChar: "l",
 	});
@@ -74,7 +74,7 @@ function sectionTitleAnims() {
 	for (let i = 0; i < section_titles.length; i++) {
 		section_titles[i].setAttribute(
 			"style",
-			`stroke-width: 0.9; stroke: #262626; stroke-dasharray: ${section_titles[
+			`stroke-width: 0.5; stroke: #262626; stroke-dasharray: ${section_titles[
 				i
 			]
 				.getTotalLength()
@@ -108,6 +108,31 @@ function sectionTitleAnims() {
 			fill: "white",
 		});
 	}
+
+	let projects_letters = document.querySelectorAll("#projects-title path");
+
+	for (let i = 0; i < projects_letters.length; i++) {
+		gsap.to(projects_letters[i], {
+			scrollTrigger: {
+				id: "projects_outline",
+				trigger: "#projects-section",
+				start: "top 80%",
+				end: "60% bottom",
+				scrub: 1,
+			},
+			// "stroke-dashoffset": 0,
+		});
+
+		gsap.to(projects_letters[i], {
+			scrollTrigger: {
+				id: "projects_fade",
+				trigger: "#projects-section",
+				toggleActions: "play none none reverse",
+				start: "60% bottom",
+			},
+			// fill: "white",
+		});
+	}
 }
 
 // Section backgrounds
@@ -122,5 +147,25 @@ function sectionBackgroundAnims() {
 		},
 		left: 0,
 		top: 0,
+	});
+
+	gsap.to(document.getElementById("bg-waves-1"), {
+		scrollTrigger: {
+			trigger: "#projects-section",
+			start: "top bottom",
+			end: "bottom top",
+			scrub: 1,
+		},
+		left: "0%",
+	});
+
+	gsap.to(document.getElementById("bg-waves-2"), {
+		scrollTrigger: {
+			trigger: "#projects-section",
+			start: "top bottom",
+			end: "bottom top",
+			scrub: 1,
+		},
+		left: "-10%",
 	});
 }
