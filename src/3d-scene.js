@@ -13,7 +13,7 @@ export const camera = new THREE.PerspectiveCamera(
 	75,
 	window.innerWidth / window.innerHeight,
 	0.1,
-	1000,
+	1000
 );
 
 camera.position.set(0, 2, 4.5);
@@ -22,11 +22,12 @@ export function initScene() {
 	const renderer = new THREE.WebGLRenderer({ alpha: true });
 
 	renderer.setSize(window.innerWidth, window.innerHeight);
+	renderer.setPixelRatio(window.devicePixelRatio);
+	camera.aspect = window.innerWidth / window.innerHeight;
 
 	const rendererContainer = document.getElementById("threejs-container");
 	rendererContainer.appendChild(renderer.domElement);
 
-	renderer.setPixelRatio(window.devicePixelRatio * 1.5);
 	const manager = new THREE.LoadingManager();
 
 	const scene = new THREE.Scene();
@@ -188,7 +189,7 @@ export function initScene() {
 			ease: "power2.inOut",
 			duration: 3,
 		},
-		"<",
+		"<"
 	);
 	tl.to(
 		camera.rotation,
@@ -199,6 +200,6 @@ export function initScene() {
 			ease: "power2.inOut",
 			duration: 2,
 		},
-		">0.5",
+		">0.5"
 	);
 }

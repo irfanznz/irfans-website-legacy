@@ -10,6 +10,7 @@ void main() {
 `;
 
 export const cellshade1FS = `
+precision highp float;
 uniform vec3 defaultColor;
 uniform vec3 black;
 uniform vec3 lightPosition;
