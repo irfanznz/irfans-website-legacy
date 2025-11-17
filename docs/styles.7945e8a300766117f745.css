@@ -1,215 +1,224 @@
 :root {
-	--pcolor: #262626;
+  --pcolor: #262626;
 }
 
 body {
-	overflow-x: hidden;
-	font-family: Jost serif;
-	font-size: 1.1rem;
-	font-weight: 400;
+  overflow-x: hidden;
+  font-family: Jost serif;
+  font-size: 1.1rem;
+  font-weight: 400;
 }
 
 a:link {
-	color: darkgray;
-	background-color: transparent;
-	text-decoration: underline;
+  color: darkgray;
+  background-color: transparent;
+  text-decoration: underline;
 }
 
 a:visited {
-	color: rgb(0, 0, 0);
-	background-color: transparent;
-	text-decoration: underline;
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  text-decoration: underline;
 }
 
 a:hover {
-	color: gray;
-	background-color: transparent;
-	text-decoration: none;
+  color: gray;
+  background-color: transparent;
+  text-decoration: none;
 }
 
 a:active {
-	color: lightgray;
-	background-color: transparent;
-	text-decoration: underline;
+  color: lightgray;
+  background-color: transparent;
+  text-decoration: underline;
 }
 
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 @font-face {
-	font-family: "Dream Orphans";
-	src: url(2b5129ced268573283a7.otf);
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Dream Orphans";
+  src: url(2b5129ced268573283a7.otf);
+  font-weight: normal;
+  font-style: normal;
 }
 
 #threejs-container {
-	position: fixed;
-	z-index: 0;
-	top: 0;
-	left: 0;
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: 0;
 }
 
 #welcome-banner {
-	width: 100%;
-	height: 600vh;
-	background-color: white;
-	border-bottom: 1px solid var(--pcolor);
+  width: 100%;
+  height: 600vh;
+  background-color: white;
+  border-bottom: 1px solid var(--pcolor);
 }
 
 #welcome-text-wrapper {
-	display: flex;
-	width: 100%;
-	height: 90vh;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  width: 100%;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
 }
 
 #welcome-text {
-	z-index: 2;
-	color: white;
-	font-size: 700%;
-	font-family: "Dream Orphans";
-	text-shadow: -1px -1px 0 var(--pcolor), 1px -1px 0 var(--pcolor),
-		-1px 1px 0 var(--pcolor), 1px 1px 0 var(--pcolor);
+  z-index: 2;
+  color: white;
+  font-size: 700%;
+  font-family: "Dream Orphans";
+  text-shadow: -1px -1px 0 var(--pcolor), 1px -1px 0 var(--pcolor),
+    -1px 1px 0 var(--pcolor), 1px 1px 0 var(--pcolor);
 }
 
 #thanks {
-	color: var(--pcolor);
-	font-size: 400%;
-	font-family: "Dream Orphans";
+  color: var(--pcolor);
+  font-size: 400%;
+  font-family: "Dream Orphans";
 }
 
 .typed-cursor {
-	z-index: 2;
-	color: var(--pcolor);
-	font-size: 1000%;
-	font-family: sans-serif;
-	animation: blink 1s infinite;
+  z-index: 2;
+  color: var(--pcolor);
+  font-size: 1000%;
+  font-family: sans-serif;
+  animation: blink 1s infinite;
 }
 
 @keyframes blink {
-	0% {
-		opacity: 1;
-	}
-	50% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 #about-section {
-	z-index: 3;
-	position: relative;
-	border-bottom: 0.5px solid var(--pcolor);
+  z-index: 3;
+  position: relative;
+  border-bottom: 0.5px solid var(--pcolor);
 }
 
 #bg-dots {
-	background-repeat: repeat;
-	top: -10%;
-	left: -10%;
-	height: 120%;
-	width: 120%;
-	background-size: 150vh;
-	background-image: url(50a842adb3663c1b28a0.png);
+  background-repeat: repeat;
+  top: -10%;
+  left: -10%;
+  height: 120%;
+  width: 120%;
+  background-size: 150vh;
+  background-image: url(50a842adb3663c1b28a0.png);
 }
 
 #bg-waves-1 {
-	top: -11.2vh;
-	left: -10%;
-	height: 120vh;
-	width: 120vw;
-	background-size: 150vh;
-	background-image: url(f8693108be667bff20d1.png);
+  top: -11.2vh;
+  left: -10%;
+  height: 120vh;
+  width: 120vw;
+  background-size: 150vh;
+  background-image: url(f8693108be667bff20d1.png);
 }
 
 #bg-waves-2 {
-	top: 0;
-	left: 0%;
-	height: 120vh;
-	width: 120vw;
-	background-size: 150vh;
-	background-image: url(f8693108be667bff20d1.png);
+  top: 0;
+  left: 0%;
+  height: 120vh;
+  width: 120vw;
+  background-size: 150vh;
+  background-image: url(f8693108be667bff20d1.png);
+}
+
+#linkedin {
+  text-align: center;
+}
+
+#liimg {
+  width: 5%;
+  height: auto;
 }
 
 .bg-container {
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 .bg-grad-trans-top {
-	background: linear-gradient(
-		0deg,
-		rgba(2, 0, 36, 0) 0%,
-		rgba(255, 255, 255, 1) 100%
-	);
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 15%;
-	z-index: 2;
+  background: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 0) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  z-index: 2;
 }
 
 .bg-grad-trans-bottom {
-	background: linear-gradient(
-		0deg,
-		rgba(255, 255, 255, 1) 0%,
-		rgba(2, 0, 36, 0) 100%
-	);
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 15%;
-	z-index: 2;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(2, 0, 36, 0) 100%
+  );
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  z-index: 2;
 }
 
 .row-spacer {
-	height: 8vh;
+  height: 8vh;
 }
 
 .text-container {
-	border: 1px solid #262626;
-	padding: 20%;
-	z-index: 3;
+  border: 1px solid #262626;
+  padding: 20%;
+  z-index: 3;
 }
 
 .section-title {
-	top: 0;
-	left: 0;
-	height: 45vh;
-	z-index: 5;
+  top: 0;
+  left: 0;
+  height: 45vh;
+  z-index: 5;
 }
 
 .box-connector {
-	height: 8vh;
-	border-right: 1px solid #262626;
+  height: 8vh;
+  border-right: 1px solid #262626;
 }
 
 html.lenis {
-	height: auto;
+  height: auto;
 }
 
 .lenis.lenis-smooth {
-	scroll-behavior: auto;
+  scroll-behavior: auto;
 }
 
 .lenis.lenis-smooth [data-lenis-prevent] {
-	overscroll-behavior: contain;
+  overscroll-behavior: contain;
 }
 
 .lenis.lenis-stopped {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .lenis.lenis-scrolling iframe {
-	pointer-events: none;
+  pointer-events: none;
 }
 
 @charset "UTF-8";/*!
